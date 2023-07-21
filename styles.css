@@ -15,11 +15,19 @@
 body {
    font-family: "Space Mono", monospace;
    background-color: var(--lightGrayishCyan);
+   width: 100%;
 }
 
 .logo {
-   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    margin: 3rem 0;
+   width: 100%;
+}
+
+.logo-img {
+   text-align: center;
 }
 .container {
    display: flex;
@@ -243,10 +251,21 @@ h6 {
       text-align: center;
       margin-top: 1.5rem;
    }
+   h6 {
+      font-size: 1.1rem;
+   }
+   #tip-amount,
+   #total-per-person {
+      font-size: 2.5rem;
+   }
 }
 
 @media (max-width: 320px) {
    h6 {
-      font-size: 1rem;
+      font-size: 0.9rem;
+   }
+   #tip-amount,
+   #total-per-person {
+      font-size: 2rem;
    }
 }
