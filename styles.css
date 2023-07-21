@@ -1,0 +1,252 @@
+:root {
+   --strongCyan: hsl(172, 67%, 45%);
+   --veryDarkCyan: hsl(183, 100%, 15%);
+   --darkGrayishCyan: hsl(186, 14%, 43%);
+   --grayishCyan: hsl(184, 14%, 56%);
+   --lightGrayishCyan: hsl(185, 41%, 84%);
+   --veryLightGrayishCyan: hsl(189, 41%, 97%);
+   --white: hsl(0, 0%, 100%);
+}
+#bill::-webkit-inner-spin-button,
+#bill::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+}
+
+body {
+   font-family: "Space Mono", monospace;
+   background-color: var(--lightGrayishCyan);
+}
+
+.logo {
+   text-align: center;
+   margin: 3rem 0;
+}
+.container {
+   display: flex;
+   flex-direction: row;
+   gap: 2rem;
+   width: 920px;
+   height: 450px;
+   margin: 0 auto;
+   border-radius: 2rem;
+   padding: 2.5rem;
+   background-color: var(--white);
+}
+
+.first-box,
+.second-box {
+   width: 50%;
+   /* border: 2px solid black; */
+}
+
+input {
+   width: 90%;
+   font-size: 24px;
+   padding: 0.5rem 1rem 0.5rem 0.5rem;
+   text-align: end;
+   border-radius: 0.2rem;
+   font-family: "Space Mono", monospace;
+   border: none;
+   background-color: var(--veryLightGrayishCyan);
+   cursor: pointer;
+   outline: none;
+}
+input:focus {
+   border: 2px solid var(--grayishCyan);
+}
+
+.input-container {
+   position: relative;
+}
+
+.input-container > img {
+   position: absolute;
+   top: 18px;
+   left: 16px;
+}
+h3 {
+   font-size: 1rem;
+   color: var(--darkGrayishCyan);
+}
+
+.tip-section {
+   margin: 2rem 0;
+}
+
+#tip-buttons {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+#tip-buttons button {
+   width: 30%;
+   padding: 0.6rem 0.5rem;
+   background-color: #00494d;
+   font-size: 1.3rem;
+   font-weight: bolder;
+   color: #fff;
+   border: none;
+   border-radius: 0.2rem;
+   cursor: pointer;
+   font-family: "Space Mono", monospace;
+}
+
+#tip-buttons button:hover {
+   background-color: var(--lightGrayishCyan);
+   color: var(--veryDarkCyan);
+}
+
+#tip-buttons button:active {
+   background-color: var(--strongCyan);
+   color: var(--veryDarkCyan);
+}
+
+#custom-tip {
+   width: 30%;
+   padding: 0.6rem 0;
+   font-size: 1.3rem;
+   text-align: center;
+   color: var(--veryDarkCyan);
+   font-weight: bolder;
+   background-color: var(--lightGrayishCyan);
+   border: none;
+}
+#custom-tip::placeholder {
+   color: var(--veryDarkCyan);
+}
+#custom-tip:focus-within {
+   border: 1px solid var(--lightGrayishCyan);
+   border-radius: 0.2rem;
+}
+.people-section-content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.hidden {
+   display: none;
+   color: red;
+}
+/*!!!!!!!! SECOND BOX !!!!!!!!*/
+.second-box {
+   border: 1px solid black;
+   padding: 2rem 2.5rem;
+   background-color: var(--veryDarkCyan);
+   border-radius: 1rem;
+}
+
+.tip-amount-section {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.total-amount-person-section {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.tip-amount-content,
+.total-amount-person-content {
+   line-height: 0.5;
+}
+
+.tip-amount-content p {
+   font-size: 1rem;
+   color: var(--grayishCyan);
+}
+
+.total-amount-person-content p {
+   font-size: 1rem;
+   color: var(--grayishCyan);
+}
+
+h6 {
+   font-size: 1.3rem;
+   margin: 1rem 0;
+   color: var(--white);
+}
+
+#tip-amount,
+#total-per-person {
+   font-size: 3rem;
+   margin: 1rem;
+   color: var(--strongCyan);
+}
+
+.button-section {
+   text-align: center;
+   margin-top: 4rem;
+}
+
+#resetBtn {
+   width: 100%;
+   text-align: center;
+   padding: 1rem;
+   font-size: 1.2rem;
+   color: var(--veryDarkCyan);
+   background-color: var(--strongCyan);
+   font-weight: 800;
+   border-radius: 0.2rem;
+   border: none;
+   cursor: pointer;
+}
+
+#resetBtn:hover {
+   background-color: var(--lightGrayishCyan);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+   .container {
+      max-width: 750px;
+   }
+}
+
+@media (max-width: 430px) {
+   body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+   }
+
+   .container {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      border-radius: 2rem 2rem 0 0;
+      padding: 2rem;
+   }
+   .first-box,
+   .second-box {
+      width: 100%;
+      /* border: 2px solid black; */
+   }
+
+   .second-box {
+      border: 1px solid black;
+      padding: 1rem 0rem;
+   }
+   .tip-amount-section,
+   .total-amount-person-section,
+   .button-section {
+      padding: 0 1rem;
+   }
+
+   .button-section {
+      text-align: center;
+      margin-top: 1.5rem;
+   }
+}
+
+@media (max-width: 320px) {
+   h6 {
+      font-size: 1rem;
+   }
+}
