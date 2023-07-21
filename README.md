@@ -7,3 +7,16 @@
 -  HTML
 -  CSS
 -  Javascript
+
+## Lessons learned:
+
+**`.tofixed()`**:
+
+.toFixed() is a method in JavaScript that is used to convert a number into a string with a fixed number of decimal places.
+
+```javascript
+let number = 3.14159;
+let fixedNumber = number.toFixed(2);
+
+console.log(fixedNumber); // Output: "3.14"
+```
